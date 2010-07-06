@@ -14,7 +14,7 @@
 // Template directory
 //   Path to template file; if not using relative path, put *FULL* path to
 //   file (eg /var/site/html/some_dir/dirlist.tpl)
-$template_dir = "/home/whateve1/whateverland.com/php";
+$template_dir = "/var/www/html/phpTEMP";
 
 // Template file name (inside $template_dir)
 $template_file = "dirlist.tpl";
@@ -22,15 +22,15 @@ $template_file = "dirlist.tpl";
 // Slideshow file extensions
 //   List all extensions to be used in slideshow (should be images), 
 //   separated with commas
-$slideshow_extensions = "jpg,gif,zip,exe";
+$slideshow_extensions = "jpg,gif,png";
 
 // Hidden file extensions
 //   List all extensions you DON'T want to display
-$hidden_extensions = "mp3,zip,rar,html,php,tpl";
+$hidden_extensions = "html,php,tpl";
 
 // Number of files in a column for slideshow files
 //   The number of times the FileBlock is called in each ColumnBlock
-$files_in_column_slideshow = 16;
+$files_in_column_slideshow = 8;
 
 // Number of files in a column for other files
 //   (see above)
