@@ -1,6 +1,32 @@
 <?php
 
 $config = array(
-	);
+	// Page title
+	// 'title'						=>	'Directory List',
+	
+	// Image extensions
+	//'image_extensions'			=>	array('jpg', 'jpeg', 'gif', 'png'),
+	
+	// Image patterns (match these, in addition to extensions)
+	//'image_patterns'				=>	array(),
+	
+	// Other file extensions
+	//'file_extensions'				=>	array(),
+	
+	// Other file patterns (in addition to extensions)
+	//'file_patterns'				=>	array('/.*/'),
+	
+	// Always hide files with these extensions
+	//'hide_extensions'				=>	array('php', 'tpl', 'default'),
+	
+	// Always hide files matching these patterns
+	//'hide_patterns'				=>	array('/^\..*/', '/.*~$/'),
+	
+	// Target directory (this is where your data is - by default the current directory)
+	//'target_dir'					=>	dirname(__FILE__),
+	
+	// Template file name
+	//'template_file'				=>	'dirlist.tpl',
+);
 
 include('dirlist.php');
