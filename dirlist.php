@@ -86,6 +86,7 @@ function dirlist_view($config, $image = true) {
 function dirlist_list($config) {
 	$images = get_file_list($config);
 	$files = get_file_list($config, false);
+	$next_file = $prev_file = '';
 
 	// Remove duplicates
 	$dupes = array_intersect($images, $files);
@@ -96,6 +97,17 @@ function dirlist_list($config) {
 	$file = false;
 	if (isset($_GET['f']) && (in_array($_GET['f'], $images) || in_array($_GET['f'], $files))) {
 		$file = $_GET['f'];
+	} else {
+		$file = $images[0];
+	}
+	$idx = array_search($file, $images);
+	if ($idx !== false) {
+		if ($idx > 0) {
+			$prev_file = $images[$idx - 1];
+		}
+		if ($idx < count($images)) {
+			$next_file = $images[$idx + 1];
+		}
 	}
 	include($config['template_file']);
 }

@@ -31,6 +31,17 @@
 	
 	<h1><?php echo $config['title'] ?></h1>
 
+<?php if ($next_file || $prev_file): ?>
+	<p class="paging">
+		<?php if ($prev_file): ?>
+			<a class="prev" href="<?php echo $_SERVER['PHP_SELF'] ?>?f=<?php echo urlencode($prev_file) ?>">Previous</a>
+		<?php endif ?>
+		|
+		<?php if ($next_file): ?>
+			<a class="next" href="<?php echo $_SERVER['PHP_SELF'] ?>?f=<?php echo urlencode($next_file) ?>">Next</a>
+		<?php endif ?>
+	</p>
+<?php endif; ?>
 <?php if ($file): ?>
 	<img src="<?php echo $_SERVER['PHP_SELF'] ?>?a=view&f=<?php echo urlencode($file) ?>" alt="<?php echo htmlentities($file) ?>" />
 	<br /><br />
